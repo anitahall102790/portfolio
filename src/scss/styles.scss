@@ -1,5 +1,439 @@
+// ---------------------------------
+// Google Fonts
+// ---------------------------------
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700&display=swap');
+
+
+// ---------------------------------
+// Bootstrap
+// ---------------------------------
+
 @import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+
+// ---------------------------------
+// Brand Variables
+// ---------------------------------
+
+$bg: #f7f6f2;
+$text: #202124;
+$muted: #6f7276;
+$surface: #ffffff;
+$border: #dedbd4;
+$accent: #4f46e5;
+
+// Warm creamy black
+$dark: #22211f;
+
+$font-heading: 'DM Serif Display', serif;
+$font-body: 'Manrope', sans-serif;
+
+
+// ---------------------------------
+// Global
+// ---------------------------------
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  background-color: #f8f7f4;
+  font-family: $font-body;
+  font-size: 1rem;
+  line-height: 1.7;
+  background-color: $bg;
+  color: $text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading;
+  font-weight: 400;
+}
+
+p,
+a,
+button,
+input,
+textarea,
+label {
+  font-family: $font-body;
+}
+
+a {
+  color: $text;
+}
+
+
+// ---------------------------------
+// Navigation
+// ---------------------------------
+
+.navbar {
+  background-color: $bg;
+}
+
+.navbar-brand {
+  font-family: $font-heading;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: $text;
+
+  &:hover,
+  &:focus {
+    color: $text;
+  }
+}
+
+.nav-link {
+  font-family: $font-body;
+  color: $muted;
+  font-weight: 500;
+
+  &:hover,
+  &:focus {
+    color: $text;
+  }
+}
+
+
+// ---------------------------------
+// Hero
+// ---------------------------------
+
+.hero {
+  padding: 5rem 0 4rem;
+}
+
+.min-vh-75 {
+  min-height: 75vh;
+}
+
+.hero-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $muted;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-family: $font-heading;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  max-width: 11ch;
+  margin-bottom: 2rem;
+}
+
+.hero-copy {
+  max-width: 42rem;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: $muted;
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+// ---------------------------------
+// Buttons
+// ---------------------------------
+
+.btn-dark {
+  background-color: $dark;
+  border-color: $dark;
+  border-radius: 999px;
+  padding: 0.85rem 1.5rem;
+  font-weight: 600;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($dark, 8%);
+    border-color: lighten($dark, 8%);
+  }
+}
+
+.btn-link {
+  color: $text;
+  text-decoration: none;
+  font-weight: 600;
+  padding-left: 0;
+
+  &:hover,
+  &:focus {
+    color: $accent;
+  }
+}
+
+
+// ---------------------------------
+// Selected Work
+// ---------------------------------
+
+.selected-work {
+  padding: 0;
+}
+
+
+// Dark title block
+
+.selected-work-header {
+  background-color: $dark;
+  color: $bg;
+  padding: 6rem 0;
+}
+
+.section-heading {
+  max-width: 60rem;
+}
+
+.section-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $muted;
+  margin-bottom: 1rem;
+}
+
+.selected-work-header .section-eyebrow {
+  color: rgba($bg, 0.65);
+}
+
+.section-title {
+  font-family: $font-heading;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  max-width: 12ch;
+  margin-bottom: 0;
+}
+
+.selected-work-header .section-title {
+  color: $bg;
+}
+
+
+// Project area
+
+.project-list {
+  padding-top: 3rem;
+  padding-bottom: 6rem;
+}
+
+.project-card {
+  padding: 4rem 0;
+  border-top: 1px solid $border;
+}
+
+.project-card:first-child {
+  border-top: none;
+}
+
+.project-card:last-child {
+  border-bottom: 1px solid $border;
+}
+
+.project-meta {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $muted;
+  margin-bottom: 1rem;
+}
+
+.project-title {
+  font-family: $font-heading;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+  max-width: 15ch;
+}
+
+.project-summary {
+  max-width: 42rem;
+  color: $muted;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.project-link {
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+  color: $text;
+  transition: transform 0.2s ease, color 0.2s ease;
+
+  &:hover,
+  &:focus {
+    color: $accent;
+    transform: translateX(4px);
+  }
+}
+
+.project-number {
+  font-family: $font-heading;
+  font-size: clamp(5rem, 10vw, 8rem);
+  line-height: 1;
+  text-align: right;
+  color: rgba($text, 0.08);
+}
+
+
+// ---------------------------------
+// Footer
+// ---------------------------------
+
+.site-footer {
+    background-color: $dark;
+    color: $bg;
+    border: none;
+    margin: 0;
+    padding: 1.5rem 0;
+  
+    .fw-semibold {
+      font-family: $font-heading;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: $bg;
+    }
+  
+    .text-muted {
+      color: rgba($bg, 0.6) !important;
+    }
+  
+    a {
+      color: $bg;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+  
+      &:hover,
+      &:focus {
+        color: $bg;
+        opacity: 0.65;
+      }
+    }
+    .footer-socials {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      
+      .footer-socials {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+      }
+      
+      .footer-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      
+        font-size: 1.5rem;
+        text-decoration: none;
+      
+        transition:
+          opacity 0.2s ease,
+          transform 0.2s ease;
+      
+        &:hover,
+        &:focus {
+          transform: translateY(-2px);
+          opacity: 0.75;
+        }
+      }
+      
+      
+      // Email
+      .email-icon {
+        color: $bg;
+      
+        &:hover,
+        &:focus {
+          color: $bg;
+        }
+      }
+      
+      
+      // LinkedIn
+      .linkedin-icon {
+        color: #0077B5;
+      
+        &:hover,
+        &:focus {
+          color: #0077B5;
+        }
+      }
+  }
+
+
+// ---------------------------------
+// Responsive
+// ---------------------------------
+
+@media (max-width: 991.98px) {
+
+  .hero {
+    padding-top: 3rem;
+  }
+
+  .hero-title {
+    max-width: 12ch;
+  }
+
+  .selected-work-header {
+    padding: 4.5rem 0;
+  }
+
+  .project-card {
+    padding: 3rem 0;
+  }
+
+  .project-number {
+    text-align: left;
+    font-size: 4rem;
+    margin-top: 1rem;
+  }
+
+}
+
+
+@media (max-width: 575.98px) {
+
+  .hero {
+    padding-top: 2rem;
+  }
+
+  .hero-copy {
+    font-size: 1rem;
+  }
+
+  .selected-work-header {
+    padding: 4rem 0;
+  }
+
+  .project-list {
+    padding-bottom: 4rem;
+  }
+
 }
