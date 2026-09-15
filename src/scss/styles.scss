@@ -109,7 +109,7 @@ a {
 // ---------------------------------
 
 .hero {
-  padding: 5rem 0 4rem;
+  padding: 6rem 0;
 }
 
 .min-vh-75 {
@@ -277,85 +277,89 @@ a {
 .site-footer {
     background-color: $dark;
     color: $bg;
-    border: none;
-    margin: 0;
     padding: 1.5rem 0;
+  }
   
-    .fw-semibold {
-      font-family: $font-heading;
-      font-size: 1.4rem;
-      font-weight: 400;
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .footer-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  
+    small {
+      color: rgba($bg, 0.65);
+      font-size: 0.75rem;
+    }
+  }
+  
+  .footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  
+  .footer-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  
+    font-size: 1.3rem;
+    line-height: 1;
+    text-decoration: none;
+  
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease;
+  
+    &:hover,
+    &:focus {
+      opacity: 0.75;
+      transform: translateY(-2px);
+    }
+  }
+  
+  .email-icon {
+    color: $bg;
+  
+    &:hover,
+    &:focus {
       color: $bg;
     }
+  }
   
-    .text-muted {
-      color: rgba($bg, 0.6) !important;
+  .linkedin-icon {
+    color: #0077B5;
+  
+    &:hover,
+    &:focus {
+      color: #0077B5;
+    }
+  }
+  
+  
+  @media (max-width: 575.98px) {
+  
+    .site-footer {
+      padding: 1.25rem 0;
     }
   
-    a {
-      color: $bg;
-      font-weight: 600;
-      text-decoration: none;
-      transition: opacity 0.2s ease;
-  
-      &:hover,
-      &:focus {
-        color: $bg;
-        opacity: 0.65;
-      }
+    .footer-inner {
+      align-items: flex-start;
+      gap: 1rem;
     }
-    .footer-socials {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-      }
-      
-      .footer-socials {
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-      }
-      
-      .footer-icon {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-      
-        font-size: 1.5rem;
-        text-decoration: none;
-      
-        transition:
-          opacity 0.2s ease,
-          transform 0.2s ease;
-      
-        &:hover,
-        &:focus {
-          transform: translateY(-2px);
-          opacity: 0.75;
-        }
-      }
-      
-      
-      // Email
-      .email-icon {
-        color: $bg;
-      
-        &:hover,
-        &:focus {
-          color: $bg;
-        }
-      }
-      
-      
-      // LinkedIn
-      .linkedin-icon {
-        color: #0077B5;
-      
-        &:hover,
-        &:focus {
-          color: #0077B5;
-        }
-      }
+  
+    .footer-info {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+    }
+  
   }
 
 
@@ -1352,6 +1356,505 @@ a {
   
     .case-nav-next {
       text-align: left;
+    }
+  
+  }
+  // ---------------------------------
+// Current Thinking - AI Strategy
+// ---------------------------------
+
+.thinking-hero {
+    padding: 5rem 0 6rem;
+  }
+  
+  .thinking-label {
+    font-family: $font-body;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $muted;
+    margin-bottom: 1.25rem;
+  }
+  
+  .thinking-heading {
+    font-family: $font-heading;
+    font-size: clamp(2.75rem, 4vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.75rem;
+  }
+  
+  .thinking-intro {
+    font-family: $font-body;
+    font-size: clamp(1.3rem, 2vw, 1.65rem);
+    font-weight: 500;
+    line-height: 1.5;
+    color: $text;
+    max-width: 38rem;
+    margin: 0;
+  }
+  
+  
+  // ---------------------------------
+  // Point of View
+  // ---------------------------------
+  
+  .thinking-position {
+    background-color: $dark;
+    color: $bg;
+    padding: 6rem 0;
+  
+    p {
+      font-family: $font-heading;
+      font-size: clamp(1.75rem, 3vw, 2.75rem);
+      line-height: 1.35;
+      margin-bottom: 2rem;
+  
+      &:last-child {
+        margin-bottom: 0;
+        color: rgba($bg, 0.72);
+      }
+    }
+  }
+  
+  
+  // ---------------------------------
+  // What I'm Seeing
+  // ---------------------------------
+  
+  .thinking-section {
+    padding: 6rem 0;
+    background-color: $bg;
+  }
+  
+  .thinking-section-intro {
+    margin-bottom: 4rem;
+  
+    h2 {
+      font-family: $font-heading;
+      font-size: clamp(2.5rem, 4vw, 3.75rem);
+      line-height: 1;
+      margin-bottom: 1.25rem;
+    }
+  
+    p {
+      font-size: 1.1rem;
+      color: $muted;
+      margin: 0;
+    }
+  }
+  
+  .ai-pressures {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+  
+  .ai-pressure {
+    padding-top: 1.5rem;
+    border-top: 1px solid $border;
+  
+    .pressure-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: $muted;
+      margin-bottom: 1.5rem;
+    }
+  
+    h3 {
+      font-family: $font-heading;
+      font-size: 2rem;
+      line-height: 1.15;
+      max-width: 15ch;
+      margin-bottom: 1.5rem;
+    }
+  
+    p:not(.pressure-label) {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: $muted;
+    }
+  }
+  
+  .shared-question {
+    margin-top: 5rem;
+    padding: 2.5rem 0;
+    border-top: 1px solid $border;
+    border-bottom: 1px solid $border;
+  
+    span {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: $muted;
+      margin-bottom: 0.75rem;
+    }
+  
+    p {
+      font-family: $font-heading;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 1.15;
+      margin: 0;
+    }
+  }
+  
+  
+  // ---------------------------------
+  // Framework
+  // ---------------------------------
+  
+  .thinking-framework {
+    padding: 6rem 0;
+    background-color: #eeece6;
+  }
+  
+  .framework-intro {
+    max-width: 22rem;
+    margin-top: 1.75rem;
+  
+    font-size: 1rem;
+    line-height: 1.75;
+    color: $muted;
+  }
+  
+  .framework-steps {
+    border-top: 1px solid $border;
+  }
+  
+  .framework-step {
+    padding: 1.75rem 0;
+    border-bottom: 1px solid $border;
+  
+    h3 {
+      font-family: $font-body;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.65rem;
+    }
+  
+    p {
+      max-width: 40rem;
+      margin: 0;
+  
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: $muted;
+    }
+  }
+  
+  
+  // ---------------------------------
+  // Decision Spectrum
+  // ---------------------------------
+  
+  .ai-decision {
+    padding: 6rem 0;
+    background-color: $bg;
+  }
+  
+  .decision-spectrum-copy {
+    max-width: 24rem;
+    margin-top: 1.75rem;
+  
+    font-size: 1rem;
+    line-height: 1.75;
+    color: $muted;
+  }
+  
+  .decision-spectrum {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+  
+    padding-top: 1rem;
+  }
+  
+  .spectrum-item {
+    padding: 0.75rem 1rem;
+    border: 1px solid $border;
+    border-radius: 0.4rem;
+  
+    span {
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+  }
+  
+  .spectrum-arrow {
+    color: $muted;
+  }
+  
+  .spectrum-note {
+    max-width: 38rem;
+    margin-top: 2rem;
+  
+    p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: $muted;
+      margin: 0;
+    }
+  }
+  
+  
+  // ---------------------------------
+  // Measure
+  // ---------------------------------
+  
+  .thinking-measure {
+    padding: 6rem 0;
+    background-color: $dark;
+    color: $bg;
+  }
+  
+  .measure-intro {
+    max-width: 40rem;
+  
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.65;
+    color: $bg;
+  
+    margin-bottom: 2.5rem;
+  }
+  
+  .measure-questions {
+    border-top: 1px solid rgba($bg, 0.2);
+  
+    p {
+      padding: 1rem 0;
+      margin: 0;
+  
+      font-size: 0.95rem;
+      color: rgba($bg, 0.72);
+  
+      border-bottom: 1px solid rgba($bg, 0.2);
+    }
+  }
+  
+  .measure-outcomes {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+  
+    span {
+      font-family: $font-heading;
+      font-size: 1.75rem;
+      color: $bg;
+    }
+  }
+  
+  
+  // ---------------------------------
+  // Closing Principle
+  // ---------------------------------
+  
+  .thinking-principle {
+    padding: 7rem 0;
+    background-color: $bg;
+  }
+  
+  .principle-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $muted;
+  
+    margin-bottom: 1.5rem;
+  }
+  
+  .principle-statement {
+    font-family: $font-heading;
+    font-size: clamp(2.75rem, 5vw, 5rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  
+    max-width: 15ch;
+    margin-bottom: 2rem;
+  }
+  
+  .principle-note {
+    max-width: 40rem;
+  
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: $muted;
+  
+    margin: 0;
+  }
+  
+  
+  // ---------------------------------
+  // AI Thinking - Responsive
+  // ---------------------------------
+  
+  @media (max-width: 991.98px) {
+  
+    .thinking-hero,
+    .thinking-position,
+    .thinking-section,
+    .thinking-framework,
+    .ai-decision,
+    .thinking-measure,
+    .thinking-principle {
+      padding: 4rem 0;
+    }
+  
+    .ai-pressures {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  
+    .framework-intro,
+    .decision-spectrum-copy {
+      max-width: 38rem;
+    }
+  
+  }
+  
+  
+  @media (max-width: 575.98px) {
+  
+    .measure-outcomes {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+  
+    .decision-spectrum {
+      align-items: flex-start;
+    }
+  
+  }
+  // ---------------------------------
+// Contact Page
+// ---------------------------------
+
+.contact-page {
+    padding: 7rem 0 5rem;
+  }
+  .contact-heading {
+    font-family: $font-heading;
+    font-size: clamp(2.75rem, 4vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.75rem;
+  }
+  
+  .contact-intro {
+    font-family: $font-body;
+    font-size: clamp(1.3rem, 2vw, 1.65rem);
+    font-weight: 500;
+    line-height: 1.5;
+  
+    color: $text;
+    max-width: 36rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-copy {
+    font-size: 1rem;
+    line-height: 1.8;
+  
+    color: $muted;
+    max-width: 36rem;
+    margin: 0;
+  }
+  
+  
+  // Contact Links
+  
+  .contact-links {
+    border-top: 1px solid $border;
+  }
+  
+  .contact-link {
+    display: block;
+  
+    padding: 1.5rem 0;
+    border-bottom: 1px solid $border;
+  
+    color: $text;
+    text-decoration: none;
+  
+    transition: color 0.2s ease;
+  
+    > span {
+      display: block;
+  
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+  
+      color: $muted;
+      margin-bottom: 0.5rem;
+    }
+  
+    &:hover,
+    &:focus {
+      color: $accent;
+  
+      .contact-arrow {
+        transform: translate(3px, -3px);
+      }
+    }
+  }
+  
+  .contact-link-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    font-family: $font-heading;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    line-height: 1.2;
+  }
+  
+  .contact-arrow {
+    display: inline-block;
+    margin-left: 1rem;
+  
+    transition: transform 0.2s ease;
+  }
+  
+  
+  // Closing
+  
+  .contact-closing {
+    margin-top: 7rem;
+    padding-top: 2rem;
+  
+    border-top: 1px solid $border;
+  
+    p {
+      font-family: $font-heading;
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      margin: 0;
+    }
+  }
+  
+  
+  // Responsive
+  
+  @media (max-width: 991.98px) {
+  
+    .contact-page {
+      padding: 4rem 0;
+    }
+  
+    .contact-links {
+      margin-top: 1rem;
+    }
+  
+    .contact-closing {
+      margin-top: 5rem;
     }
   
   }

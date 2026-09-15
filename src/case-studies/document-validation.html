@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Critical Document Validation | Anita Hall</title>
+
+  <link rel="stylesheet" href="../scss/styles.scss">
+  <script type="module" src="../js/main.js"></script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container py-3">
+
+      <a class="navbar-brand fw-bold" href="../index.html">
+        Anita Hall
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNav"
+        aria-controls="mainNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto gap-lg-3">
+
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../about.html">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../work.html">Work</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../contact.html">Contact</a>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <main>
+
+    <!-- Case Study Hero -->
+    <section class="case-hero">
+      <div class="container">
+
+        <a href="../work.html" class="case-back">
+          ← Back to Work
+        </a>
+
+        <div class="row g-5">
+
+          <div class="col-lg-8">
+
+            <h1 class="case-heading">
+              Critical Document Validation
+            </h1>
+
+            <p class="case-intro">
+              Creating a low-risk way to validate a critical document workflow
+              without putting production data or high-value case work at risk.
+            </p>
+
+          </div>
+
+
+          <div class="col-lg-4">
+
+            <div class="case-facts">
+
+              <div class="case-fact">
+                <span>My Role</span>
+                <p>Business Analyst · Delivery Lead</p>
+              </div>
+
+              <div class="case-fact">
+                <span>Environment</span>
+                <p>Azure · NetDocuments · Enterprise File Transfer</p>
+              </div>
+
+              <div class="case-fact">
+                <span>Focus</span>
+                <p>User Need · Risk Reduction · Solution Design</p>
+              </div>
+
+              <div class="case-fact">
+                <span>Constraint</span>
+                <p>Production testing was not an acceptable risk</p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- The Problem -->
+    <section class="case-content case-challenge">
+      <div class="container">
+
+        <div class="row g-5">
+
+          <div class="col-lg-4">
+            <h2 class="case-section-heading">
+              The Problem
+            </h2>
+          </div>
+
+          <div class="col-lg-8">
+
+            <div class="case-section-copy">
+
+              <p class="case-lead">
+                The file transfer system handled documents tied to
+                high-value legal work. When a key stakeholder needed to
+                validate the workflow, simply testing against production
+                wasn't an acceptable option.
+              </p>
+
+              <p>
+                The system picked up files, moved them through the required
+                security and virus-scanning process, and ultimately delivered
+                documents into NetDocuments. That meant validation needed to
+                test more than whether a file could move from one place to
+                another. We needed confidence that the complete workflow
+                behaved as expected.
+              </p>
+
+              <p>
+                At the same time, the stakeholder's production cabinet
+                contained real case documents. Introducing test files or
+                experimenting with the workflow there created unnecessary risk
+                for information that mattered to active legal work.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- How I Thought About It -->
+    <section class="case-content case-role">
+      <div class="container">
+
+        <div class="row g-5">
+
+          <div class="col-lg-5">
+
+            <h2 class="case-section-heading">
+              How I Thought About It
+            </h2>
+
+            <p class="role-intro">
+              The goal wasn't simply to find somewhere else to put a test file.
+              It was to preserve the value of end-to-end validation without
+              exposing production work to unnecessary risk.
+            </p>
+
+          </div>
+
+
+          <div class="col-lg-7">
+
+            <div class="role-responsibilities">
+
+              <div class="role-item">
+                <h3>Protect the production environment</h3>
+
+                <p>
+                  Any solution needed to keep test activity separate from the
+                  stakeholder's live case documents and avoid introducing
+                  unnecessary changes into a sensitive workflow.
+                </p>
+              </div>
+
+
+              <div class="role-item">
+                <h3>Keep the test realistic</h3>
+
+                <p>
+                  Moving the test completely outside the existing workflow
+                  would reduce its value. We still needed to validate how
+                  documents traveled through the system and arrived in
+                  NetDocuments.
+                </p>
+              </div>
+
+
+              <div class="role-item">
+                <h3>Keep the solution lightweight</h3>
+
+                <p>
+                  This didn't require a large new feature or complicated
+                  technical build. The best answer would create the separation
+                  we needed using the existing workflow wherever possible.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- The Solution -->
+    <section class="key-decision">
+      <div class="container">
+
+        <div class="decision-label">
+          <span>The Solution</span>
+        </div>
+
+        <div class="row g-5">
+
+          <div class="col-lg-5">
+
+            <h2 class="decision-heading">
+              Create a safe place to test the real workflow.
+            </h2>
+
+          </div>
+
+
+          <div class="col-lg-7">
+
+            <div class="decision-story">
+
+              <p class="decision-lead">
+                I proposed creating a dedicated test cabinet in NetDocuments
+                where we could send test files through the workflow without
+                touching the stakeholder's production cabinet.
+              </p>
+
+              <p>
+                The test cabinet gave us a controlled destination while allowing
+                the team to exercise the workflow that actually mattered:
+                picking up the file, processing it through the transfer and
+                security steps, and confirming that it arrived correctly in
+                NetDocuments.
+              </p>
+
+              <p>
+                Instead of changing the production process or building a large
+                testing solution around a relatively focused need, we isolated
+                the risk and kept the validation process simple.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="decision-takeaway">
+
+          <p>
+            <span>The Principle</span>
+            Reduce the risk, not the value of the test.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Outcome & Impact -->
+    <section class="case-content case-outcome">
+      <div class="container">
+
+        <div class="row g-5">
+
+          <div class="col-lg-4">
+
+            <h2 class="case-section-heading">
+              Outcome & Impact
+            </h2>
+
+          </div>
+
+
+          <div class="col-lg-8">
+
+            <div class="outcome-content">
+
+              <p class="outcome-lead">
+                The test cabinet provided a straightforward way to validate
+                the document workflow while keeping production case work
+                protected.
+              </p>
+
+              <div class="outcome-points">
+
+                <div class="outcome-item">
+                  <h3>Reduced production risk</h3>
+
+                  <p>
+                    Test documents were separated from the stakeholder's live
+                    case files, allowing validation without introducing
+                    unnecessary activity into the production cabinet.
+                  </p>
+                </div>
+
+
+                <div class="outcome-item">
+                  <h3>Preserved meaningful validation</h3>
+
+                  <p>
+                    The team could still test the end-to-end document flow
+                    rather than relying on a simplified test that didn't
+                    represent how the system actually operated.
+                  </p>
+                </div>
+
+
+                <div class="outcome-item">
+                  <h3>Kept effort low</h3>
+
+                  <p>
+                    The solution addressed the immediate need without requiring
+                    a significant new build or adding unnecessary complexity to
+                    the system.
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- What I Took Forward -->
+    <section class="case-reflection">
+      <div class="container">
+
+        <div class="row g-5 align-items-start">
+
+          <div class="col-lg-4">
+
+            <h2 class="case-section-heading">
+              What I Took Forward
+            </h2>
+
+          </div>
+
+
+          <div class="col-lg-8">
+
+            <div class="reflection-content">
+
+              <p class="reflection-lead">
+                Good solutions don't have to be complicated.
+              </p>
+
+              <p>
+                This was a relatively small decision inside a much larger
+                technical environment, but it's a good example of how I like
+                to solve problems: understand what actually needs to be true,
+                identify where the risk lives, and find the simplest solution
+                that satisfies both.
+              </p>
+
+              <p>
+                More effort doesn't automatically create more value. Sometimes
+                the right answer is a small change that gives the user what
+                they need while making the system safer and easier to work with.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Case Study Navigation -->
+    <section class="case-navigation">
+      <div class="container">
+
+        <div class="case-navigation-inner">
+
+          <a href="azure-modernization.html" class="case-nav-back">
+            ← Azure Modernization
+          </a>
+
+          <a href="ai-adoption-strategy.html" class="case-nav-next">
+            <span>Next Case Study</span>
+            Enterprise AI Adoption Strategy →
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container py-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+  
+        <div>
+          <small class="text-muted">
+            Technical Strategy & Delivery Leader
+          </small>
+        </div>
+  
+        <div class="footer-socials">
+
+            <a
+              href="mailto:anitahalljs@gmail.com"
+              class="footer-icon email-icon"
+              aria-label="Email Anita"
+              title="Email"
+            >
+              <i class="bi bi-envelope"></i>
+            </a>
+          
+            <a
+              href="https://www.linkedin.com/in/anitahall/"
+              class="footer-icon linkedin-icon"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Anita's LinkedIn profile"
+              title="LinkedIn"
+            >
+              <i class="bi bi-linkedin"></i>
+            </a>
+          
+          </div>
+  
+      </div>
+  
+      <div class="pt-3">
+        <small class="text-muted">
+          © 2026 Anita Hall
+        </small>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
