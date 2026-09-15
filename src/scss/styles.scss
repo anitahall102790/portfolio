@@ -116,23 +116,33 @@ a {
   min-height: 75vh;
 }
 
-.hero-eyebrow {
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: $muted;
-  margin-bottom: 1.5rem;
-}
-
-.hero-title {
-  font-family: $font-heading;
-  font-size: clamp(3.5rem, 8vw, 7rem);
-  line-height: 0.95;
-  letter-spacing: -0.03em;
-  max-width: 11ch;
-  margin-bottom: 2rem;
-}
+.hero-heading {
+    font-family: $font-heading;
+    font-size: clamp(2.75rem, 4vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.75rem;
+  }
+  
+  .hero-intro {
+    font-family: $font-body;
+    font-size: clamp(1.3rem, 2vw, 1.65rem);
+    font-weight: 500;
+    line-height: 1.5;
+    color: $text;
+    max-width: 34rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-role {
+    font-family: $font-body;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $muted;
+    margin-bottom: 0.75rem;
+  }
 
 .hero-copy {
   max-width: 42rem;
@@ -148,7 +158,25 @@ a {
   align-items: center;
   flex-wrap: wrap;
 }
+// Hero Portrait
 
+.hero-portrait {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    img {
+      display: block;
+  
+      width: min(100%, 23rem);
+      height: 29rem;
+  
+      object-fit: cover;
+      object-position: center;
+  
+      border-radius: 2rem 7rem 2rem 2rem;
+    }
+  }
 
 // ---------------------------------
 // Buttons
@@ -178,54 +206,6 @@ a {
   &:focus {
     color: $accent;
   }
-}
-
-
-// ---------------------------------
-// Selected Work
-// ---------------------------------
-
-.selected-work {
-  padding: 0;
-}
-
-
-// Dark title block
-
-.selected-work-header {
-  background-color: $dark;
-  color: $bg;
-  padding: 6rem 0;
-}
-
-.section-heading {
-  max-width: 60rem;
-}
-
-.section-eyebrow {
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: $muted;
-  margin-bottom: 1rem;
-}
-
-.selected-work-header .section-eyebrow {
-  color: rgba($bg, 0.65);
-}
-
-.section-title {
-  font-family: $font-heading;
-  font-size: clamp(3rem, 6vw, 5.5rem);
-  line-height: 0.98;
-  letter-spacing: -0.03em;
-  max-width: 12ch;
-  margin-bottom: 0;
-}
-
-.selected-work-header .section-title {
-  color: $bg;
 }
 
 
@@ -287,14 +267,6 @@ a {
     color: $accent;
     transform: translateX(4px);
   }
-}
-
-.project-number {
-  font-family: $font-heading;
-  font-size: clamp(5rem, 10vw, 8rem);
-  line-height: 1;
-  text-align: right;
-  color: rgba($text, 0.08);
 }
 
 
@@ -399,6 +371,14 @@ a {
 
   .hero-title {
     max-width: 12ch;
+  }
+  .hero-portrait {
+    justify-content: flex-start;
+
+    img {
+      width: min(75vw, 20rem);
+      height: 25rem;
+    }
   }
 
   .selected-work-header {
@@ -685,4 +665,693 @@ a {
       align-items: flex-start;
       gap: 0.75rem;
     }
+  }
+  // ---------------------------------
+// Work Page
+// ---------------------------------
+
+.work-hero {
+    padding: 7rem 0 5rem;
+  }
+  
+  .work-heading {
+    font-family: $font-heading;
+    font-size: clamp(2.75rem, 4vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.75rem;
+  }
+  
+  .work-intro {
+    font-family: $font-body;
+    font-size: clamp(1.3rem, 2vw, 1.65rem);
+    font-weight: 500;
+    line-height: 1.5;
+    color: $text;
+    max-width: 48rem;
+    margin: 0;
+  }
+  
+  
+  // ---------------------------------
+  // Case Study List
+  // ---------------------------------
+  
+  .case-study-list {
+    padding-bottom: 7rem;
+  }
+  
+  .case-study-preview {
+    padding: 4.5rem 0;
+    border-top: 1px solid $border;
+  
+    &:last-child {
+      border-bottom: 1px solid $border;
+    }
+  }
+  
+  .case-study-type {
+    font-family: $font-body;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $text;
+    margin-bottom: 2rem;
+  }
+  
+  .case-study-details {
+  
+    p {
+      color: $muted;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+  
+    span {
+      display: block;
+      color: $text;
+      font-weight: 700;
+      margin-bottom: 0.15rem;
+    }
+  }
+  
+  .case-study-title {
+    font-family: $font-heading;
+    font-size: clamp(2.25rem, 4vw, 3.75rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    max-width: 15ch;
+    margin-bottom: 1.5rem;
+  }
+  
+  .case-study-summary {
+    color: $muted;
+    font-size: 1rem;
+    line-height: 1.8;
+    max-width: 42rem;
+    margin-bottom: 1.75rem;
+  }
+  
+  .case-study-link {
+    display: inline-block;
+    color: $text;
+    font-weight: 700;
+    text-decoration: none;
+  
+    transition:
+      color 0.2s ease,
+      transform 0.2s ease;
+  
+    &:hover,
+    &:focus {
+      color: $accent;
+      transform: translateX(4px);
+    }
+  }
+  
+  
+  // ---------------------------------
+  // Work Page Responsive
+  // ---------------------------------
+  
+  @media (max-width: 991.98px) {
+  
+    .work-hero {
+      padding: 4rem 0 3rem;
+    }
+  
+    .case-study-preview {
+      padding: 3.5rem 0;
+    }
+  
+    .case-study-type {
+      margin-bottom: 1rem;
+    }
+  
+  }
+  // ---------------------------------
+// Case Study Hero
+// ---------------------------------
+
+.case-hero {
+    padding: 5rem 0 6rem;
+  }
+  
+  .case-back {
+    display: inline-block;
+    color: $muted;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 4rem;
+  
+    transition:
+      color 0.2s ease,
+      transform 0.2s ease;
+  
+    &:hover,
+    &:focus {
+      color: $text;
+      transform: translateX(-4px);
+    }
+  }
+  
+  .case-heading {
+    font-family: $font-heading;
+    font-size: clamp(2.75rem, 4vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.75rem;
+  }
+  
+  .case-intro {
+    font-family: $font-body;
+    font-size: clamp(1.3rem, 2vw, 1.65rem);
+    font-weight: 500;
+    line-height: 1.5;
+    color: $text;
+    max-width: 38rem;
+    margin: 0;
+  }
+  
+  
+  // Case facts
+  
+  .case-facts {
+    border-top: 1px solid $border;
+    padding-top: 1.5rem;
+  }
+  
+  .case-fact {
+    padding: 1rem 0;
+    border-bottom: 1px solid $border;
+  
+    span {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: $muted;
+      margin-bottom: 0.35rem;
+    }
+  
+    p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: $text;
+      margin: 0;
+    }
+  }
+  
+  
+  @media (max-width: 991.98px) {
+  
+    .case-hero {
+      padding: 3rem 0 4rem;
+    }
+  
+    .case-back {
+      margin-bottom: 3rem;
+    }
+  
+    .case-facts {
+      margin-top: 1rem;
+    }
+  
+  }
+  // ---------------------------------
+// Case Study Content
+// ---------------------------------
+
+.case-content {
+    padding: 6rem 0;
+  }
+  
+  .case-challenge {
+    background-color: $dark;
+    color: $bg;
+  }
+  
+  .case-section-heading {
+    font-family: $font-heading;
+    font-size: clamp(2.5rem, 4vw, 3.75rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: inherit;
+    margin: 0;
+  }
+  
+  .case-section-copy {
+    max-width: 44rem;
+  
+    p {
+      font-size: 1rem;
+      line-height: 1.85;
+      margin-bottom: 1.5rem;
+      color: rgba($bg, 0.72);
+  
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  
+    .case-lead {
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.65;
+      color: $bg;
+    }
+  }
+  
+  @media (max-width: 991.98px) {
+  
+    .case-content {
+      padding: 4rem 0;
+    }
+  
+    .case-section-heading {
+      margin-bottom: 1rem;
+    }
+  
+  }
+  // ---------------------------------
+// Case Study - My Role
+// ---------------------------------
+
+.case-role {
+    background-color: $bg;
+    color: $text;
+  }
+  
+  .role-intro {
+    max-width: 24rem;
+    margin-top: 1.75rem;
+  
+    font-family: $font-body;
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.7;
+  
+    color: $text;
+  }
+  
+  .role-responsibilities {
+    border-top: 1px solid $border;
+  }
+  
+  .role-item {
+    padding: 1.75rem 0;
+    border-bottom: 1px solid $border;
+  
+    h3 {
+      font-family: $font-body;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 0.65rem;
+      color: $text;
+    }
+  
+    p {
+      max-width: 38rem;
+      margin: 0;
+  
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: $muted;
+    }
+  }
+  
+  @media (max-width: 991.98px) {
+  
+    .role-intro {
+      max-width: 38rem;
+      margin-bottom: 1rem;
+    }
+  
+  }
+  // ---------------------------------
+// Case Study - Approach
+// ---------------------------------
+
+.case-approach {
+    background-color: #eeece6;
+    color: $text;
+  }
+  
+  .approach-intro {
+    max-width: 22rem;
+    margin-top: 1.75rem;
+  
+    font-size: 1rem;
+    line-height: 1.75;
+    color: $muted;
+  }
+  
+  .approach-list {
+    position: relative;
+    padding-left: 2rem;
+  
+    &::before {
+      content: "";
+      position: absolute;
+  
+      top: 0.5rem;
+      bottom: 0.5rem;
+      left: 0;
+  
+      width: 1px;
+      background-color: $border;
+    }
+  }
+  
+  .approach-item {
+    position: relative;
+    padding: 0 0 3rem 1.5rem;
+  
+    &:last-child {
+      padding-bottom: 0;
+    }
+  
+    &::before {
+      content: "";
+      position: absolute;
+  
+      left: -2.28rem;
+      top: 0.45rem;
+  
+      width: 0.6rem;
+      height: 0.6rem;
+  
+      background-color: $dark;
+      border-radius: 50%;
+    }
+  
+    h3 {
+      font-family: $font-body;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.4;
+      color: $text;
+      margin-bottom: 0.75rem;
+    }
+  
+    p {
+      max-width: 40rem;
+      margin: 0;
+  
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: $muted;
+    }
+  }
+  
+  
+  @media (max-width: 991.98px) {
+  
+    .approach-intro {
+      max-width: 38rem;
+      margin-bottom: 1rem;
+    }
+  
+  }
+  // ---------------------------------
+// Case Study - Key Decision
+// ---------------------------------
+
+.key-decision {
+    background-color: $bg;
+    color: $text;
+    padding: 6rem 0;
+  }
+  
+  .decision-label {
+    padding-bottom: 1.25rem;
+    margin-bottom: 3.5rem;
+    border-bottom: 1px solid $border;
+  
+    span {
+      font-family: $font-body;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: $muted;
+    }
+  }
+  
+  .decision-heading {
+    font-family: $font-heading;
+    font-size: clamp(2.5rem, 4vw, 3.75rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    max-width: 10ch;
+    margin: 0;
+  }
+  
+  .decision-story {
+    max-width: 42rem;
+  
+    p {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: $muted;
+      margin-bottom: 1.5rem;
+  
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  
+    .decision-lead {
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 1.65;
+      color: $text;
+    }
+  }
+  
+  .decision-takeaway {
+    margin-top: 4rem;
+    padding: 2rem 0 0;
+    border-top: 1px solid $border;
+  
+    p {
+      font-family: $font-heading;
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      line-height: 1.25;
+      margin: 0;
+      max-width: 28rem;
+    }
+  
+    span {
+      display: block;
+  
+      font-family: $font-body;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+  
+      color: $muted;
+      margin-bottom: 0.65rem;
+    }
+  }
+  
+  
+  @media (max-width: 991.98px) {
+  
+    .key-decision {
+      padding: 4rem 0;
+    }
+  
+    .decision-heading {
+      max-width: 16ch;
+      margin-bottom: 1rem;
+    }
+  
+    .decision-label {
+      margin-bottom: 2.5rem;
+    }
+  
+  }
+  // ---------------------------------
+// Case Study - Outcome & Impact
+// ---------------------------------
+
+.case-outcome {
+    background-color: $dark;
+    color: $bg;
+  }
+  
+  .outcome-content {
+    max-width: 44rem;
+  }
+  
+  .outcome-lead {
+    font-family: $font-body;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.65;
+  
+    color: $bg;
+    margin-bottom: 3rem;
+  }
+  
+  .outcome-points {
+    border-top: 1px solid rgba($bg, 0.2);
+  }
+  
+  .outcome-item {
+    padding: 1.75rem 0;
+    border-bottom: 1px solid rgba($bg, 0.2);
+  
+    h3 {
+      font-family: $font-body;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.4;
+  
+      color: $bg;
+      margin-bottom: 0.65rem;
+    }
+  
+    p {
+      max-width: 38rem;
+      margin: 0;
+  
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: rgba($bg, 0.7);
+    }
+  }
+  // ---------------------------------
+// Case Study - Reflection
+// ---------------------------------
+
+.case-reflection {
+    background-color: $bg;
+    color: $text;
+    padding: 6rem 0;
+  }
+  
+  .reflection-content {
+    max-width: 42rem;
+  
+    p {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: $muted;
+      margin-bottom: 1.5rem;
+  
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+  .reflection-lead {
+    font-family: $font-heading;
+    font-size: clamp(1.75rem, 3vw, 2.5rem) !important;
+    line-height: 1.25 !important;
+    color: $text !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  
+  @media (max-width: 991.98px) {
+  
+    .case-reflection {
+      padding: 4rem 0;
+    }
+  
+  }
+  // ---------------------------------
+// Case Study Navigation
+// ---------------------------------
+
+.case-navigation {
+    background-color: $bg;
+    padding: 2rem 0 5rem;
+  }
+  
+  .case-navigation-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 3rem;
+  
+    padding-top: 2rem;
+    border-top: 1px solid $border;
+  }
+  
+  .case-nav-back {
+    color: $muted;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+  
+    transition:
+      color 0.2s ease,
+      transform 0.2s ease;
+  
+    &:hover,
+    &:focus {
+      color: $text;
+      transform: translateX(-4px);
+    }
+  }
+  
+  .case-nav-next {
+    font-family: $font-heading;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    line-height: 1.2;
+    color: $text;
+    text-align: right;
+    text-decoration: none;
+  
+    transition:
+      color 0.2s ease,
+      transform 0.2s ease;
+  
+    span {
+      display: block;
+  
+      font-family: $font-body;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+  
+      color: $muted;
+      margin-bottom: 0.4rem;
+    }
+  
+    &:hover,
+    &:focus {
+      color: $accent;
+      transform: translateX(4px);
+    }
+  }
+  
+  
+  @media (max-width: 575.98px) {
+  
+    .case-navigation {
+      padding-bottom: 4rem;
+    }
+  
+    .case-navigation-inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+  
+    .case-nav-next {
+      text-align: left;
+    }
+  
   }
